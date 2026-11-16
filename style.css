@@ -1,0 +1,429 @@
+:root {
+  --page: #f4f6f8;
+  --white: #ffffff;
+  --text: #252b33;
+  --light-text: #66717d;
+  --blue: #315b85;
+  --border: #d8dee5;
+}
+
+body.dark {
+  --page: #20252b;
+  --white: #2b323a;
+  --text: #f1f3f5;
+  --light-text: #c0c7cf;
+  --blue: #a9c9e8;
+  --border: #424b55;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--blue);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--light-text);
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  background: var(--white);
+  color: var(--text);
+}
+
+.primary-button {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  border: 1px solid var(--blue);
+  padding: 9px 15px;
+  border-radius: 4px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 22px 60px;
+}
+
+.hero {
+  background: var(--white);
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero-text {
+  padding: 35px;
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 8px 0 15px;
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero-description {
+  color: var(--light-text);
+  max-width: 430px;
+  margin-bottom: 20px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.categories, .stories {
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 27px;
+  margin: 5px 0 16px;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-button.selected,
+.category-button:hover {
+  background: var(--blue);
+  color: white;
+}
+
+.stories-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 15px;
+}
+
+.stories-heading input {
+  width: 230px;
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--text);
+}
+
+.result-message, .byline {
+  color: var(--light-text);
+  font-size: 13px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.blog-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-thumbnail {
+  display: block;
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-category {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.blog-card h3 {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.blog-card p {
+  color: var(--light-text);
+  font-size: 14px;
+}
+
+.blog-card .byline {
+  margin-top: auto;
+}
+
+.read-button {
+  align-self: flex-start;
+}
+
+.empty-message {
+  background: var(--white);
+  padding: 20px;
+  color: var(--light-text);
+}
+
+.about {
+  margin-top: 55px;
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.about p:last-child {
+  color: var(--light-text);
+  max-width: 700px;
+  margin-bottom: 0;
+}
+
+footer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  color: var(--light-text);
+  font-size: 13px;
+  margin: 0;
+}
+
+dialog {
+  width: min(550px, calc(100% - 25px));
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  padding: 22px;
+  background: var(--white);
+  color: var(--text);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.close-button {
+  font-size: 25px;
+  border: 0;
+  background: transparent;
+}
+
+form label {
+  display: block;
+  margin: 12px 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid var(--border);
+  background: var(--page);
+  color: var(--text);
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.form-note {
+  color: var(--light-text);
+  font-size: 12px;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.read-content {
+  padding: 8px;
+}
+
+.read-byline, .read-summary {
+  color: var(--light-text);
+}
+
+.message {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #252b33;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.message.show {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero img {
+    height: 240px;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .header-buttons {
+    margin-left: auto;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  main {
+    padding: 22px 14px 45px;
+  }
+
+  .hero-text {
+    padding: 25px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .stories-heading {
+    display: block;
+  }
+
+  .stories-heading input {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    display: block;
+  }
+
+  footer p {
+    margin-top: 8px;
+  }
+}
