@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOCTRA | Stories and Ideas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="#">NOCTRA<span>.</span></a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#stories">Stories</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="header-buttons">
+        <button id="theme-button" class="small-button" type="button">
+          Dark mode
+        </button>
+        <button id="write-button" class="primary-button" type="button">
+          Write a blog
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-text">
+          <p class="eyebrow">WELCOME TO NOCTRA</p>
+          <h1>Ideas worth<br /><span>sharing.</span></h1>
+          <p class="hero-description">
+            A place to read, explore and share thoughts about technology,
+            science, culture and everyday life.
+          </p>
+          <a class="primary-button hero-link" href="#stories"
+            >Explore stories</a
+          >
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80"
+          alt="Mountain lake surrounded by hills"
+        />
+      </section>
+
+      <section class="categories" id="categories">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">BROWSE TOPICS</p>
+            <h2>Explore categories</h2>
+          </div>
+        </div>
+        <div class="category-buttons">
+          <button class="category-button selected" data-category="All">
+            All
+          </button>
+          <button class="category-button" data-category="Technology">
+            Technology
+          </button>
+          <button class="category-button" data-category="AI">AI</button>
+          <button class="category-button" data-category="Science">
+            Science
+          </button>
+          <button class="category-button" data-category="Culture">
+            Culture
+          </button>
+          <button class="category-button" data-category="Lifestyle">
+            Lifestyle
+          </button>
+        </div>
+      </section>
+
+      <section class="stories" id="stories">
+        <div class="stories-heading">
+          <div>
+            <p class="eyebrow">LATEST FROM THE COMMUNITY</p>
+            <h2>Recent stories</h2>
+          </div>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search blogs..."
+            aria-label="Search blogs"
+          />
+        </div>
+        <p id="result-message" class="result-message">Showing all stories</p>
+        <div id="blog-list" class="blog-grid"></div>
+        <p id="empty-message" class="empty-message" hidden>
+          No stories found. Try another search or category.
+        </p>
+      </section>
+
+      <section class="about" id="about">
+        <p class="eyebrow">ABOUT NOCTRA</p>
+        <h2>Curiosity brings ideas together.</h2>
+        <p>
+          NOCTRA is a student-made blog website where readers can explore
+          different topics and publish their own posts. This project is built
+          using HTML, CSS and JavaScript.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <a class="logo" href="#">NOCTRA<span>.</span></a>
+      <p>Made by our team · 2026</p>
+    </footer>
+
+    <dialog id="write-dialog">
+      <form id="blog-form">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">COMMUNITY</p>
+            <h2>Write a blog</h2>
+          </div>
+          <button
+            type="button"
+            class="close-button"
+            id="close-dialog"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+        <label for="author">Your name</label>
+        <input
+          id="author"
+          type="text"
+          maxlength="40"
+          placeholder="Enter your name"
+          required
+        />
+        <label for="title">Blog title</label>
+        <input
+          id="title"
+          type="text"
+          maxlength="90"
+          placeholder="Enter a title"
+          required
+        />
+        <label for="category">Category</label>
+        <select id="category">
+          <option>Technology</option>
+          <option>AI</option>
+          <option>Science</option>
+          <option>Culture</option>
+          <option>Lifestyle</option>
+        </select>
+        <label for="summary">Short description</label>
+        <textarea
+          id="summary"
+          rows="2"
+          maxlength="200"
+          placeholder="Write a short description"
+          required
+        ></textarea>
+        <label for="body">Blog content</label>
+        <textarea
+          id="body"
+          rows="6"
+          placeholder="Write your blog here..."
+          required
+        ></textarea>
+        <p class="form-note">
+          Your post is saved in this browser only. It will not appear on other
+          devices.
+        </p>
+        <button class="primary-button submit-button" type="submit">
+          Publish blog
+        </button>
+      </form>
+    </dialog>
+
+    <dialog id="read-dialog">
+      <div class="read-content">
+        <button
+          type="button"
+          class="close-button"
+          id="close-read"
+          aria-label="Close"
+        >
+          ×
+        </button>
+        <p id="read-category" class="eyebrow"></p>
+        <h2 id="read-title"></h2>
+        <p id="read-byline" class="read-byline"></p>
+        <p id="read-summary" class="read-summary"></p>
+        <div id="read-body" class="read-body"></div>
+      </div>
+    </dialog>
+    <div id="message" class="message" role="status"></div>
+  </body>
+</html>
